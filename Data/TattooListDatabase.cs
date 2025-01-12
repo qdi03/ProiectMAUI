@@ -15,6 +15,7 @@ namespace ProiectMAUI.Data
             _database.CreateTableAsync<TattooList>().Wait();
             _database.CreateTableAsync<Tattoo>().Wait();
             _database.CreateTableAsync<ListTattoo>().Wait();
+            _database.CreateTableAsync<Parlor>().Wait();
         }
 
         public Task<int>SaveTattooAsync(Tattoo tattoo)
@@ -92,6 +93,22 @@ namespace ProiectMAUI.Data
         public Task<int> DeleteListTattooAsync(ListTattoo listTattoo)
         {
             return _database.DeleteAsync(listTattoo);
+        }
+
+        public Task<List<Parlor>> GetParlorsAsync()
+        {
+            return _database.Table<Parlor>().ToListAsync();
+        }
+        public Task<int> SaveParlorAsync(Parlor parlor)
+        {
+            if (parlor.ID != 0)
+            {
+                return _database.UpdateAsync(parlor);
+            }
+            else
+            {
+                return _database.InsertAsync(parlor);
+            }
         }
     }
 }

@@ -36,5 +36,6 @@
                     Clicked="OnAddButtonClicked" />
             </Grid>
         </StackLayout>
-    </ContentPage.Content>
+    </ContentPage.Content>
+
 </ContentPage>

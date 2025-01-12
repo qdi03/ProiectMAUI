@@ -12,6 +12,8 @@ public partial class ListPage : ContentPage
     {
         var tlist = (TattooList)BindingContext;
         tlist.Date = DateTime.UtcNow;
+        Parlor selectedParlor = (ParlorPicker.SelectedItem as Parlor);
+        tlist.ParlorID = selectedParlor.ID;
         await App.Database.SaveTattooListAsync(tlist);
         await Navigation.PopAsync();
     }
@@ -59,6 +61,9 @@ public partial class ListPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+        var items = await App.Database.GetParlorsAsync();
+        ParlorPicker.ItemsSource = (System.Collections.IList)items;
+        ParlorPicker.ItemDisplayBinding = new Binding("ParlorDetails");
         var shopl = (TattooList)BindingContext;
 
         listView.ItemsSource = await App.Database.GetListTattoosAsync(shopl.ID);

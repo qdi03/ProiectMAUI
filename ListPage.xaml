@@ -7,6 +7,7 @@
         <Editor Placeholder="Enter the description of the tattoos list"
             Text="{Binding Description}"
             HeightRequest="50" />
+        <Picker x:Name="ParlorPicker" Title="Enter Parlor Name"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />

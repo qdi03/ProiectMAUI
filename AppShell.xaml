@@ -17,8 +17,13 @@
             ContentTemplate="{DataTemplate local:AboutPage}"
         />
         <ShellContent
+            Title="My Parlors"
+            ContentTemplate="{DataTemplate local:ParlorEntryPage}"
+        />
+        <ShellContent
             Title="My Tattoos Lists"
             ContentTemplate="{DataTemplate local:ListEntryPage}"
-        />
+        />
+
     </TabBar>
 </Shell>
