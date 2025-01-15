@@ -21,17 +21,15 @@ public partial class ParlorPage : ContentPage
     {
         var parlor = (Parlor)BindingContext;
         var address = parlor.Adress;
-       // var locations = await Geocoding.GetLocationsAsync(address);
+        //var locations = await Geocoding.GetLocationsAsync(address);
 
         var options = new MapLaunchOptions{ Name = "Salonul meu preferat" };
         //var parlorlocation = locations?.FirstOrDefault(); ///Android
-        var parlorlocation = new Location(46.7492379, 23.5745597);
+        var parlorlocation = new Location(46.7492379, 23.5745597); //WindowsMachine
         //var myLocation = await Geolocation.GetLocationAsync(); ///Android
-        var myLocation = new Location(46.771251, 23.625991);
+        var myLocation = new Location(46.771251, 23.625991); //WindowsMachine
 
         var distance = myLocation.CalculateDistance(parlorlocation, DistanceUnits.Kilometers);
-        /* var parlorlocation= new Location(46.7492379, 23.5745597);//pentru
-        Windows Machine */
         if(distance < 5)
         {
             var request = new NotificationRequest

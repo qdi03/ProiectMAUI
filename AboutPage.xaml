@@ -10,7 +10,11 @@
             <Label FontSize="22" FontAttributes="Bold" Text="Muntele Tattoo" VerticalOptions="End" />
             <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
         </HorizontalStackLayout>
-        <Label Text="This app will help you to manage your tattoo parlor" />
+        <Label Text="Muntele Tattoo este salonul din Cluj-Napoca unde arta tatuajului se întâlnește cu empatia și profesionalismul." />
+        <Label Text ="La noi, nu doar că primești un tatuaj de calitate superioară, dar găsești răbdare, înțelegere și dedicare."/>
+        <Label Text="Fiecare client este important pentru noi, iar povestea ta merită să fie ascultată și transpusă într-un design unic, plin de semnificație și emoție. Ne dedicăm timpul necesar pentru a crea proiectul perfect pentru tine, colaborând strâns pentru a ne asigura că rezultatul final este exact ceea ce îți dorești."/>
+        <Label Text="Salonul nostru oferă un spațiu igienic, primitor și relaxant, unde te poți simți în siguranță și confortabil pe parcursul întregului proces. Acestea sunt valorile care ne definesc și ne fac să fim speciali: atenția la detalii, respectul pentru fiecare client și pasiunea pentru arta tatuajului."/>
+        <Label Text="Te așteptăm să descoperi experiența Muntele Tattoo și să transformăm împreună visul tău într-o operă de artă pe piele."/>
 
     </VerticalStackLayout>
 </ContentPage>
